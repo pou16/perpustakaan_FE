@@ -1,0 +1,113 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dcdcdc;
+}
+
+/* CARD */
+.login-card {
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+/* FORM */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* INPUT */
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 2px solid #7f8c8d;
+  transition: 0.3s;
+}
+
+.input-box:focus-within {
+  border-color: #3498db;
+  background: #f5faff;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.eye {
+  cursor: pointer;
+}
+
+/* FORGOT */
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #555;
+}
+
+/* BUTTON */
+.login-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #d5d5d5;
+}
+
+.login-btn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+/* TEXT */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
