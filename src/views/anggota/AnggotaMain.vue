@@ -24,8 +24,8 @@
           <td>{{ a.jk }}</td>
           <td>{{ a.kelas }}</td>
           <td>
-            <span class="action-link">Edit</span> | 
-            <span class="action-link delete">Delete</span>
+            <span class="action-link" @click="$emit('edit', a)">Edit</span> | 
+            <span class="action-link delete" @click="$emit('delete', index)">Delete</span>
           </td>
         </tr>
       </tbody>

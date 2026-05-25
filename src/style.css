@@ -374,3 +374,13 @@ body {
 .modal-actions button { 
     width: 100px; 
 }
+.btn-logout-sidebar {
+    margin-top: auto;
+    background-color: #ffeded;
+    color: #d9534f !important;
+    font-weight: bold;
+}
+.btn-logout-sidebar:hover {
+    background-color: #d9534f !important;
+    color: white !important;
+}
