@@ -1,56 +1,28 @@
 <template>
-  <div class="login-container">
-    <div class="login-box">
-      <h1>LOGIN</h1>
-
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-
-      <p>Forgot Password?</p>
-
-      <button @click="login">Login</button>
+  <div class="login-box">
+    <h2>LOGIN PERPUS</h2>
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="@.......">
     </div>
+    <div class="input-group">
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input :type="showPassword ? 'text' : 'password'" placeholder="**">
+        <span class="eye-icon" @click="showPassword = !showPassword">👁️</span>
+      </div>
+    </div>
+    <div class="forgot-password">Forgot Password?</div>
+    <button class="btn-login" @click="$emit('login-success')">Login</button>
   </div>
 </template>
 
-<script setup>
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-function login() {
-  router.push('/dashboard')
+<script>
+import { ref } from 'vue';
+export default {
+  setup() {
+    const showPassword = ref(false);
+    return { showPassword };
+  }
 }
 </script>
-
-<style>
-.login-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1f5f9;
-}
-
-.login-box {
-  background: white;
-  padding: 30px;
-  width: 300px;
-  border-radius: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background: #2563eb;
-  color: white;
-  border: none;
-}
-</style>

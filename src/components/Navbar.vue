@@ -1,0 +1,7 @@
+<template>
+  <header class="navbar">
+    <div class="search-bar">
+      <input type="text" placeholder="Search....">
+    </div>
+  </header>
+</template>

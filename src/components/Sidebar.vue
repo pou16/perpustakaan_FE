@@ -1,27 +1,14 @@
 <template>
-  <div class="sidebar">
-    <h2>Perpustakaan</h2>
-
-    <router-link to="/dashboard">Home</router-link>
-    <router-link to="/kelas">Manajemen Kelas</router-link>
-    <router-link to="/siswa">Manajemen Siswa</router-link>
-  </div>
+  <aside class="sidebar">
+    <div class="logo">Perpus Apk</div>
+    <nav>
+      <button :class="{ active: currentPage === 'home' }" @click="$emit('navigate', 'home')">Home</button>
+      <button :class="{ active: ['buku', 'tambah-buku', 'edit-buku', 'detail-buku'].includes(currentPage) }" @click="$emit('navigate', 'buku')">Manajemen Buku</button>
+      <button :class="{ active: ['anggota', 'tambah-anggota'].includes(currentPage) }" @click="$emit('navigate', 'anggota')">Manajemen Anggota</button>
+    </nav>
+  </aside>
 </template>
 
-<style>
-.sidebar {
-  width: 220px;
-  height: 100vh;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-  position: fixed;
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 15px 0;
-}
-</style>
+<script>
+export default { props: ['currentPage'] }
+</script>
